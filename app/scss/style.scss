@@ -22,6 +22,9 @@ ul {
    padding: 0;
    list-style: none;
 }
+p {
+   margin: 0;
+}
 h1,
 h2,
 h3,
@@ -36,6 +39,19 @@ a {
    text-decoration: none;
    color: inherit;
 }
+.container {
+   max-width: 1220px;
+   margin: 0 auto;
+   padding: 0 10px;
+}
+.title {
+   font-size: 24px;
+   line-height: 33px;
+   font-weight: 700;
+   color: #868585;
+   margin-bottom: 60px;
+   text-transform: uppercase;
+}
 //Start Header block
 .header {
    padding: 70px 10px 38px;
@@ -49,6 +65,7 @@ a {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   margin-bottom: 150px;
    &__subtitle {
       font-size: 18px;
       line-height: 25px;
@@ -69,10 +86,7 @@ a {
    &__button {
       margin-top: 50px;
       margin-bottom: auto;
-   }
-}
-.logo {
-   &__img {
+      align-self: center;
    }
 }
 .button {
@@ -88,7 +102,8 @@ a {
       font-size: 18px;
       line-height: 25px;
       display: inline-block;
-      transform: translate(-57px, -17px);
+      transform: translateY(-17px);
+      margin-left: -57px;
    }
 }
 .social {
@@ -96,14 +111,34 @@ a {
    justify-content: center;
    align-items: center;
    &__item {
-   }
-
-   &__link {
       padding: 0 10px;
-   }
-
-   &__img {
    }
 }
 
 //End Header block
+//Start Service block
+
+.service {
+   margin-bottom: 150px;
+   &__inner {
+      display: flex;
+   }
+   &__content {
+      flex-basis: 510px;
+      margin-right: 90px;
+   }
+   &__box {
+      margin-bottom: 50px;
+   }
+   &__box-title {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 700;
+      margin-bottom: 15px;
+   }
+   &__img {
+      object-fit: cover;
+   }
+}
+
+//End Service block
