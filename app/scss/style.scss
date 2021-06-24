@@ -3,11 +3,10 @@ html {
 }
 body {
    font-family: "Noto Sans", sans-serif;
-   font-weight: 400;
    font-size: 14px;
    line-height: 19px;
+   font-weight: 400;
    color: #303030;
-   // font-family: 'Noto Sans JP', sans-serif;
 }
 *,
 *::after,
@@ -225,6 +224,13 @@ a {
    left: 275px;
    bottom: -3px;
    z-index: 5;
+   cursor: pointer;
+   path {
+      transition: fill 0.5s;
+   }
+   &:hover path {
+      fill: #a9a32a;
+   }
 }
 .slick-right {
    left: 340px;
@@ -240,6 +246,7 @@ a {
    background-size: cover;
    background-position: center;
    text-align: center;
+   margin-bottom: 150px;
    &__text {
       max-width: 670px;
       margin: 0 auto;
@@ -250,3 +257,181 @@ a {
 }
 
 //End Blockquote block
+//Start Clients block
+
+.clients {
+   margin-bottom: 150px;
+}
+.clients-slider {
+   &__item {
+   }
+   &__box {
+      display: flex;
+   }
+   &__box-img {
+      flex-basis: 510px;
+      margin-right: 90px;
+      margin-bottom: 30px;
+   }
+
+   &__box-content {
+   }
+
+   &__box-title {
+      max-width: 478px;
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 700;
+      margin-bottom: 30px;
+   }
+
+   &__box-list {
+      margin-left: 50px;
+      margin-bottom: 50px;
+   }
+
+   &__box-item {
+      margin-bottom: 15px;
+   }
+}
+.button {
+   &__path {
+   }
+
+   &__text {
+   }
+}
+
+//End Clients block
+//Start Step block
+
+.step {
+   margin-bottom: 150px;
+   &__inner {
+      display: flex;
+   }
+   &__content {
+      margin-right: 90px;
+   }
+   &__list {
+      list-style: none;
+      counter-reset: number;
+   }
+   &__list-item {
+      counter-increment: number;
+      margin-bottom: 30px;
+      &::before {
+         content: "0" counter(number);
+         margin-bottom: 11px;
+         color: #868585;
+      }
+      &:nth-child(n + 10)::before {
+         content: counter(number);
+      }
+   }
+   &__list-title {
+      margin-bottom: 2px;
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 700;
+   }
+   &__list-text {
+   }
+   &__img {
+      flex-basis: 600px;
+      object-fit: cover;
+   }
+}
+
+//End Step block
+//Start Footer block
+
+.footer {
+   background-image: url("../images/footer-bg.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   padding: 70px 0 50px;
+   color: #fff;
+   &__top {
+      display: flex;
+      margin-bottom: 150px;
+   }
+   &__form {
+      flex-basis: 510px;
+      margin-right: 90px;
+   }
+   &__title {
+      font-size: 24px;
+      line-height: 43px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+   }
+   &__input {
+      border: none;
+      border-bottom: 1px solid #fff;
+      display: block;
+      width: 100%;
+      background-color: transparent;
+      padding-bottom: 11px;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 14px;
+      line-height: 19px;
+      color: #fff;
+      margin-bottom: 60px;
+      &::placeholder {
+         font-family: "Noto Sans", sans-serif;
+         font-size: 14px;
+         line-height: 19px;
+         color: #fff;
+      }
+   }
+   &__form-btn {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #fff;
+      cursor: pointer;
+   }
+   &__contacts {
+   }
+
+   &__contacts-title {
+   }
+
+   &__contacts-list {
+   }
+
+   &__contacts-item {
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 30px;
+   }
+
+   &__phone {
+   }
+
+   &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__bottom-link {
+   }
+}
+
+.button {
+   &__path {
+   }
+
+   &__text {
+   }
+}
+
+.footer .social {
+   margin-right: -10px;
+}
+
+//End Footer block
